@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.function.UnaryOperator;
 
 public class App {
    
@@ -17,6 +18,18 @@ public class App {
 
         Sravnenie(summ);
         isPositive(summ);
+
+        System.out.println("Введите количество строк для вывода: " );
+        int repeat = in.nextInt();
+        System.out.println("Введите текст для вывода: ");
+        String source = in.next();
+        printString(source,repeat);
+        System.out.println("Введите год: " );
+        int year = in.nextInt();
+        isLeapYear(year);
+
+
+
    
     }
     private static  boolean  Sravnenie (int summ) {
@@ -54,4 +67,28 @@ public class App {
         }
     }
     
-}
+    private static void printString(String source, int repeat) {
+        // напечатать строку source repeat раз
+        
+        while (repeat >= 1){
+            System.out.println(source + repeat);
+            repeat --;
+
+        }
+
+    }
+
+    private static boolean isLeapYear(int year) {
+        // проверить, является ли год високосным. если да - return true
+        if ((year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0)){
+            System.out.println(year +" Год високостный");
+            return true;
+        }
+        else {
+            System.out.println(year +" Год  не високостный");
+            return false;
+
+        }    
+        }
+    }
+
