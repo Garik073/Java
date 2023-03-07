@@ -31,6 +31,7 @@ public class App {
         createArray(5,1);
         int[] arr1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         Mass(arr1);
+        MassNew();
 
 
 
@@ -113,6 +114,22 @@ public class App {
                 arr[i] = 0;
             }
             System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void MassNew() {
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}};
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i == j) {
+                    arr[i][j] = 1;
+                }
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
         }
     }
     }
