@@ -28,6 +28,10 @@ public class App {
         int year = in.nextInt();
         isLeapYear(year);
 
+        createArray(5,1);
+        int[] arr1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        Mass(arr1);
+
 
 
    
@@ -90,5 +94,26 @@ public class App {
 
         }    
         }
+
+        public static void createArray(int len, int initialValue){
+            int[] arr = new int[len];
+            for (int i = 0; i < len; i++) {
+                arr[i] = initialValue;
+                System.out.print("[" + i + "]" + arr[i] + " ");
+            }
+            System.out.println("\n");
+        }
+
+        // Заменить 0 на 1, 1 на 0;
+    public static void Mass(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                arr[i] = 1;
+            } else {
+                arr[i] = 0;
+            }
+            System.out.print(arr[i] + " ");
+        }
+    }
     }
 
